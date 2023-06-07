@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Button from './Button'
+import StepMessage from './StepMessage'
 
 const messages = [
   'Learn React ⚛️',
@@ -31,9 +32,7 @@ export default function App() {
             <div className={step >= 3 ? 'active' : ''}>3</div>
           </div>
 
-          <p className='message'>
-            Step {step}: {messages[step - 1]}
-          </p>
+          <StepMessage step={step}>{messages[step - 1]}</StepMessage>
 
           <div className='buttons'>
             <Button
